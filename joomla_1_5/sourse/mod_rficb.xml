@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+  <name>Rficb payment gateway</name>
+  <author>Romanof</author>
+  <creationDate>Dec 2014</creationDate>
+  <copyright>(c) 2014 Rficb</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+  <authorEmail></authorEmail> 
+  <authorUrl></authorUrl>
+  <version>1.0.0</version>
+  <description>Rficb payment gateway module for Joomla! 1.5. Оплата товаров и услуг при помощи системы РФИ банка.</description>
+  <files>
+    <filename module="mod_rficb">mod_rficb.php</filename>
+    <filename>index.html</filename>
+    <filename>parse.inc.php</filename>
+    <filename>process.php</filename>
+    <filename>payed.php</filename>
+    <filename>fail.php</filename>
+    <filename>readme.txt</filename>
+    <filename>images/index.html</filename>
+    <filename>images/button_small.png</filename>
+  </files>
+  <params>
+    <param name="rficb_process" type="text" size="60" default="/modules/mod_rficb/process.php" label="URL скрипта обработчика" description="Адрес страницы вашего сайта, на которую будет поступать от платежной системы MainPay информация о платежах." />
+    <param name="rficb_success" type="text" size="60" default="/modules/mod_rficb/payed.php" label="URL страницы успешной покупки" description="Адрес страницы вашего сайта, на которую клиенты будут переходить ПОСЛЕ УСПЕШНОЙ ОПЛАТЫ" />
+    <param name="rficb_fail" type="text" size="60" default="/modules/mod_rficb/fail.php" label="URL страницы ошибки" description="Адрес страницы вашего сайта, на которую клиенты будут переходить ПРИ ОШИБКАХ В ПРОЦЕССЕ ОПЛАТЫ" />
+    <param name="rficb_skey" size="40" type="text" default="" label="Секретный ключ" description="Введите секретный ключ, указанный в настройках вашего сервиса на сайте MainPay" />
+    <param name="rficb_key" size="80" type="text" default="" label="Ключ платежа" description="Введите ключ платежа, взятый из сгенерированной платежной формы на сайте MainPay" />
+  </params>
+</install>
